@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MdButtonModule, MdCheckboxModule, MaterialModule} from '@angular/material';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 
@@ -8,9 +10,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialModule,
+    MdButtonModule,
+    MdCheckboxModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MdButtonModule, MdCheckboxModule],
 })
 export class AppModule { }
